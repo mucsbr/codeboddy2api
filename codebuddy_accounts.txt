@@ -1,0 +1,4 @@
+# CodeBuddy账号池
+# 格式: email|password|created_at|platform|access_token|refresh_token|token_expires|refresh_expires
+# =========================================================================================================
+yhqinjlr@duckmail.sbs|MBqDxt9fXk6v|2025-09-29 21:53:55|codebuddy.ai||||
