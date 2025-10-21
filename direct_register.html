@@ -1,0 +1,477 @@
+<html class="login-pf in-single-page" lang="en"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+            <meta name="HandheldFriendly" content="true">
+        <title>
+        Sign in to copilot
+        </title>
+        <link rel="icon" href="/auth/resources/ggxjf/login/ide-oversea/img/icon.png">
+                <link href="/auth/resources/ggxjf/common/keycloak/node_modules/@patternfly/patternfly/patternfly.min.css" rel="stylesheet">
+                <link href="/auth/resources/ggxjf/common/keycloak/node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet">
+                <link href="/auth/resources/ggxjf/common/keycloak/node_modules/patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet">
+                <link href="/auth/resources/ggxjf/common/keycloak/lib/pficon/pficon.css" rel="stylesheet">
+                <link href="/auth/resources/ggxjf/login/ide-oversea/css/login.css" rel="stylesheet">
+                <link href="/auth/resources/ggxjf/login/ide-oversea/css/styles.v9.css" rel="stylesheet">
+        <script type="importmap">
+            {
+                "imports": {
+                    "rfc4648": "/auth/resources/ggxjf/common/keycloak/vendor/rfc4648/rfc4648.js"
+                }
+            }
+        </script>
+        <script type="module">
+                import { checkCookiesAndSetTimer } from "/auth/resources/ggxjf/login/ide-oversea/js/authChecker.js";
+                checkCookiesAndSetTimer(
+                "/auth/realms/copilot/login-actions/restart?client_id=console&tab_id=l58NQX5Akj4&client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNvZGVidWRkeS5haS9yZWdpc3Rlci91c2VyL2NvbXBsZXRlIiwicnQiOiJjb2RlIn0&skip_logout=true"
+                );
+        </script>
+            <link rel=" stylesheet" as="style" href="/auth/resources/ggxjf/login/ide-oversea/css/Dialog.css" onload="this.onload=null;this.rel=' stylesheet'">
+                <link rel="stylesheet" as="style" href="/auth/resources/ggxjf/login/ide-oversea/css/Button.css" onload="this.onload=null;this.rel='stylesheet'">
+                <script type="module" src="/auth/resources/ggxjf/login/ide-oversea/js/Dialog.js"></script>
+                <script src="/auth/resources/ggxjf/login/ide-oversea/js/axios.min.js"></script>
+                <script src="/auth/resources/ggxjf/login/ide-oversea/js/vue.min.js"></script>
+                <script type="module">
+                document.addEventListener("click", (event) => {
+                    const link = event.target.closest("a[data-once-link]");
+                    if (!link) {
+                        return;
+                    }
+                    if (link.getAttribute("aria-disabled") === "true") {
+                        event.preventDefault();
+                        return;
+                    }
+                    const {
+                        disabledClass
+                    } = link.dataset;
+                    if (disabledClass) {
+                        link.classList.add(...disabledClass.trim().split(/\s+/));
+                    }
+                    link.setAttribute("role", "link");
+                    link.setAttribute("aria-disabled", "true");
+                });
+                </script>
+    </head>
+
+    <body class="">
+        <div class="login-pf-page">
+            <div id="kc-header" class="login-pf-page-header">
+                <div id="kc-header-wrapper" class="">
+                    copilot
+                </div>
+            </div>
+            <div class="card-pf">
+                <header class="login-pf-header">
+                            <div class="">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 subtitle">
+                                    <span class="subtitle"><span class="required">*</span>
+                                        Required fields
+                                    </span>
+                                </div>
+                                <div class="col-md-10">
+                                    <h1 id="kc-page-title">
+                                    </h1>
+                                </div>
+                            </div>
+                </header>
+                <a href="/" target="_self" class="header-logo">
+                    <img class="logo" src="https://codebuddy-1328495429.cos.accelerate.myqcloud.com/web/ide/codeBuddy.png">
+                </a>
+                <div id="kc-content">
+                    <div id="kc-content-wrapper">
+                    <style>
+                    [v-cloak]>* {
+                        display: none;
+                    }
+
+                    [v-cloak]::before {
+                        content: "loading... ";
+                    }
+                    </style>
+                    <div id="vue-app"><div class="title">
+                            Get Started with
+                            <span class="title-light">
+                                CodeBuddy
+                            </span></div> <div class="body-text"><div class="body-text title-desc">
+                                Already have an account?
+                                    <div id="kc-registration-container"><div id="kc-registration"><a tabindex="8" href="/auth/realms/copilot/login-actions/authenticate?client_id=console&amp;tab_id=l58NQX5Akj4&amp;client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNvZGVidWRkeS5haS9yZWdpc3Rlci91c2VyL2NvbXBsZXRlIiwicnQiOiJjb2RlIn0" class="sp-text">
+                                                Get Started
+                                            </a></div></div></div></div> <div id="kc-social-providers" class="kc-social-section kc-social-gray"><ul class="pf-c-login__main-footer-links kc-social-links"><li><a data-once-link="" data-disabled-class="" id="social-google" type="button" href="/auth/realms/copilot/broker/google/login?client_id=console&amp;tab_id=l58NQX5Akj4&amp;client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNvZGVidWRkeS5haS9yZWdpc3Rlci91c2VyL2NvbXBsZXRlIiwicnQiOiJjb2RlIn0&amp;session_code=7SVb6goqyQIYV1YSkphELnefnQTgQHuWrqVCC1TKp6k" class="pf-c-button pf-m-control pf-m-block kc-social-item kc-social-gray sp-button"><i aria-hidden="true" class="kc-social-provider-logo kc-social-gray fa fa-google"></i> <span class="kc-social-provider-name kc-social-icon-text">
+                                                    Google
+                                                </span></a></li> <li><a data-once-link="" data-disabled-class="" id="social-github" type="button" href="/auth/realms/copilot/broker/github/login?client_id=console&amp;tab_id=l58NQX5Akj4&amp;client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNvZGVidWRkeS5haS9yZWdpc3Rlci91c2VyL2NvbXBsZXRlIiwicnQiOiJjb2RlIn0&amp;session_code=7SVb6goqyQIYV1YSkphELnefnQTgQHuWrqVCC1TKp6k" class="pf-c-button pf-m-control pf-m-block kc-social-item kc-social-gray sp-button"><i aria-hidden="true" class="kc-social-provider-logo kc-social-gray fa fa-github"></i> <span class="kc-social-provider-name kc-social-icon-text">
+                                                    GitHub
+                                                </span></a></li></ul> <h2 class="kc-social-providers-divider">
+                                    or continue with
+                                </h2></div> <form id="kc-register-form" action="https://www.codebuddy.ai/auth/realms/copilot/login-actions/registration?session_code=7SVb6goqyQIYV1YSkphELnefnQTgQHuWrqVCC1TKp6k&amp;execution=425f0833-31bd-4759-96bc-5264d9b6b075&amp;client_id=console&amp;tab_id=l58NQX5Akj4&amp;client_data=eyJydSI6Imh0dHBzOi8vd3d3LmNvZGVidWRkeS5haS9yZWdpc3Rlci91c2VyL2NvbXBsZXRlIiwicnQiOiJjb2RlIn0" method="post" class="form-horizontal"><div id="country-region-app" class="form-group"><div class="sp-color-wrapper-outline"><div class="custom-select-wrapper"><input type="hidden" name="countryFullName"> <input type="hidden" name="countryName"> <input type="hidden" name="countryCode"> <input type="hidden" name="lang" value="en"> <div class="custom-select-trigger input-shadow"><i class="icon icon-globe"></i> <span class="selected-text"><span class="placeholder">
+                                                    Registration location
+                                                </span></span> <i class="icon icon-chevron-down"></i></div> <div class="custom-select-dropdown" style="display: none;"><div class="dropdown-search"><input type="text" placeholder="Search countries..." class="search-input"> <i class="icon icon-search"></i></div> <div class="dropdown-section current-dropdown-section"><div class="flex items-center cursor-pointer"><div class="section-header">
+                                                        Current Region
+                                                    </div> <div class="current-region-option selected">
+                                                        Singapore (+65)
+                                                    </div></div></div> <!----> <div class="dropdown-section"><div data-letter="I" class="dropdown-option">
+                                                Indonesia (+62)
+                                            </div><div data-letter="J" class="dropdown-option">
+                                                Japan (+81)
+                                            </div><div data-letter="S" class="dropdown-option">
+                                                Singapore (+65)
+                                            </div><div data-letter="T" class="dropdown-option">
+                                                Thailand (+66)
+                                            </div></div></div></div> <span id="input-error" aria-live="polite" class="pf-c-form__helper-text pf-m-error required kc-feedback-text" style="display: none;">
+                                    
+                                </span> <div style="color: rgb(104, 107, 110);">
+                                    The selected registration location sets exchange/tax rates, which cannot be modified after registration.
+                                </div></div></div> <div class="form-group"><div class="sp-color-wrapper-outline"><label for="email" class="pf-c-form__label pf-c-form__label-text input-label"><div class="input-wrapper input-shadow"><i class="icon icon-email"></i> <input tabindex="0" id="email" name="email" value="" type="text" autofocus="autofocus" autocomplete="email" aria-invalid="" dir="ltr" placeholder="Email" class="pf-c-form-control"></div></label></div> <span id="input-error" aria-live="polite" class="pf-c-form__helper-text pf-m-error required kc-feedback-text" style="display: none;">
+                                
+                            </span></div> <div class="form-group"><div dir="ltr" class="pf-c-input-group sp-color-wrapper-outline"><div class="input-wrapper input-shadow"><label for="password" class="pf-c-form__label pf-c-form__label-text input-label input-wrapper"><i class="icon icon-password"></i> <input tabindex="1" id="password" name="password" autocomplete="current-password" aria-invalid="" placeholder="Password" type="password" class="pf-c-form-control"> <i class="icon icon-eyes icon-eyes-open"></i></label></div></div> <span id="input-error" aria-live="polite" class="pf-c-form__helper-text pf-m-error required kc-feedback-text" style="display: none;">
+                            
+                        </span></div> <div class="form-group"><div dir="ltr" class="pf-c-input-group sp-color-wrapper-outline"><div class="input-wrapper input-shadow"><label for="password-confirm" class="pf-c-form__label pf-c-form__label-text input-label input-wrapper"><i class="icon icon-password"></i> <input tabindex="1" id="password-confirm" name="password-confirm" autocomplete="current-password" aria-invalid="" placeholder="PasswordComfirm" type="password" class="pf-c-form-control"> <i class="icon icon-eyes icon-eyes-open"></i></label></div></div> <span id="input-error" aria-live="polite" class="pf-c-form__helper-text pf-m-error required kc-feedback-text" style="display: none;">
+                            
+                        </span></div> <div id="kc-form-buttons" class="form-group"><div class="submit-button-wrapper"><input tabindex="7" name="login" disabled="disabled" id="kc-login" type="submit" value="Register Now" class="pf-c-button pf-m-block btn-lg submit-button"></div></div> <div class="checkbox-wrapper"><div class="checkbox-line"><label class="custom-checkbox"><input type="checkbox" id="agree-policy"> <div class="sp-color-checkmark-outline"><div class="checkmark"></div></div> <span for="agree-policy">
+                                    I confirm that I have read and acknowledge the
+                                    <a href="/genie/document/privacyPolicy" target="_blank">
+                                        Privacy Policy,</a> <a href="/genie/document/dpsa" target="_blank">
+                                        Data Processing and Security Agreement,
+                                    </a> <a href="/genie/document/testTerm" target="_blank">
+                                        The Tencent CodeBuddy IDE testing terms of use
+                                    </a></span></label></div></div></form></div>
+                    <script type="text/javascript">
+                    const hostname = window.location.hostname;
+
+                    function checkIsMobile() {
+                        const userAgent = window.parent ? window.parent.navigator.userAgent : navigator.userAgent;
+                        return /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+                    }
+                    if (window.self === window.top) {
+                        document.documentElement.classList.add('in-single-page');
+                    }
+                    var HOT_CODES = [];
+                    const defaultList = [{
+                            "IOS2": "ID",
+                            "EnName": "Indonesia",
+                            "Code": "62"
+                        },
+                        {
+                            "IOS2": "JP",
+                            "EnName": "Japan",
+                            "Code": "81"
+                        },
+                        {
+                            "IOS2": "SG",
+                            "EnName": "Singapore",
+                            "Code": "65"
+                        },
+                        {
+                            "IOS2": "TH",
+                            "EnName": "Thailand",
+                            "Code": "66"
+                        }
+                    ];
+                    var app = new Vue({
+                        el: '#vue-app',
+                        data: {
+                            errorMessage: '',
+                            errorEmailMessage: '',
+                            errorPasswordMessage: '',
+                            errorPasswordConfirmMessage: '',
+                            username: '',
+                            email: '',
+                            password: '',
+                            passwordConfirm: '',
+                            isMobile: checkIsMobile(),
+                            agreedPolicy: false,
+                            showPassword: false,
+                            showPasswordConfirm: false,
+                            offsetX: 0,
+                            offsetY: 0,
+                            resetTimeout: null,
+                            countryOptions: defaultList,
+                            selectedArea: {},
+                            currentIOS: '',
+                            isDropdownOpen: false,
+                            searchQuery: '',
+                            areaErrorMessage: '',
+                            filteredOptions: [],
+                            loading: false
+                        },
+                        methods: {
+                            changePasswordShow: function changePasswordShow() {
+                                this.showPassword = !this.showPassword;
+                            },
+                            changePasswordConfirmShow: function changePasswordConfirmShow() {
+                                this.showPasswordConfirm = !this.showPasswordConfirm;
+                            },
+                            handleSocialLogin(e) {
+                                e.preventDefault();
+                                const href = e.target.href || e.target.parentNode.href;
+                                const id = e.target.id || e.target.parentNode.id;
+                                const _this = this;
+                                if (!this.agreedPolicy) {
+                                    new Dialog().confirm(`<div class="confirm-title">
+Service Agreement and Privacy Terms
+</div> <p>
+I confirm that I have read and acknowledge the
+<a class="color-light" href="/genie/document/privacyPolicy" target="_blank">
+Privacy Policy,</a>
+                                        <a class="color-light" href="/genie/document/dpsa" target="_blank">
+Data Processing and Security Agreement,</a>
+                                        <a class="color-light" href="/genie/document/testTerm" target="_blank">
+Tencent Cloud Terms of Service
+</a></p>`, {
+                                        type: 'custom',
+                                        buttons: [{
+                                            value: 'Confirm',
+                                            type: 'success',
+                                            events: function(event) {
+                                                _this.agreedPolicy = true;
+                                                // event.dialog是当前实例对象
+                                                event.dialog.remove();
+                                                _this.handleAuthLogin(href);
+                                            }
+                                        }, {
+                                            value: 'Cancel',
+                                            type: 'normal'
+                                        }]
+                                    });
+                                } else {
+                                    this.handleAuthLogin(href);
+                                }
+                            },
+                            handleAuthLogin(url) {
+                                if (window.self === window.top) {
+                                    window.location.href = url;
+                                } else {
+                                    window.parent.location.href = url;
+                                }
+                            },
+                            handleMouseMove(event) {
+                                const button = event.target;
+                                const rect = button.getBoundingClientRect();
+                                // 计算鼠标相对于按钮的偏移
+                                this.offsetX = event.clientX - rect.left;
+                                this.offsetY = event.clientY - rect.top;
+                                // 通过操作伪元素样式，动态改变位置
+                                // 这里我们利用 CSS 变量传递偏移值
+                                button.style.setProperty('--pseudo-x', this.offsetX + `px`);
+                                button.style.setProperty('--pseudo-y', this.offsetY + `px`);
+                            },
+                            resetPosition(event) {
+                                const button = event.target;
+                            },
+                            fetchCountries: function() {
+                                var self = this;
+                                self.loading = true;
+                                return axios.post('/billing/area/get-country-code', {
+                                    filterForbidden: 1
+                                }).then(function(res) {
+                                    const proxyData = JSON.parse(res.data.data);
+                                    //console.log('res fetchCountries', res.data.data, proxyData)
+                                    const list = (proxyData.data && proxyData.data && proxyData.data.list).map(function(i) {
+                                        return {
+                                            IOS2: i.IOS2,
+                                            EnName: i.EnName,
+                                            Code: i.Code
+                                        };
+                                    });
+                                    // TODO: filter、不支持香港、韩国、欧盟
+                                    const needFilterCode = [
+                                        'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT',
+                                        'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE',
+                                        'KR', 'HK'
+                                    ];
+                                    const allowList = ['JP', 'TH', 'SG', 'ID'];
+                                    const countryOptions = list.filter(i => needFilterCode.indexOf(i.IOS2) === -1).filter(i => allowList.indexOf(i.IOS2) !== -1);
+                                    // console.log(countryOptions)
+                                    self.countryOptions = countryOptions;
+                                    self.loading = false;
+                                    self.areaErrorMessage = '';
+                                }).catch(e => {
+                                    self.loading = false;
+                                    self.areaErrorMessage = 'load location error, please retry';
+                                });
+                            },
+                            fetchUserArea: function() {
+                                var self = this;
+                                return axios.post('/billing/area/get-user-area-info', {
+                                        action: 'getUserAreaInfo'
+                                    })
+                                    .then(function(res) {
+                                        const proxyData = JSON.parse(res.data.data);
+                                        // console.log('res fetchUserArea', res.data.data);
+                                        let currentIOS = proxyData.data.IOS2;
+                                        // console.log('currentIOS', currentIOS)
+                                        if (currentIOS === 'CN') {
+                                            currentIOS = '';
+                                        }
+                                        self.currentIOS = currentIOS;
+                                    });
+                            },
+                            toggleDropdown: function() {
+                                this.isDropdownOpen = !this.isDropdownOpen;
+                                var self = this;
+                                if (!this.countryOptions.length) {
+                                    this.fetchCountries();
+                                }
+                                if (this.isDropdownOpen) {
+                                    this.$nextTick(function() {
+                                        document.addEventListener('click', self.handleClickOutside);
+                                    });
+                                } else {
+                                    document.removeEventListener('click', self.handleClickOutside);
+                                }
+                            },
+                            closeDropdown: function() {
+                                this.isDropdownOpen = false;
+                                this.searchQuery = '';
+                                document.removeEventListener('click', this.handleClickOutside);
+                            },
+                            handleClickOutside: function(event) {
+                                var dropdown = document.querySelector('.custom-select-wrapper');
+                                if (dropdown && !dropdown.contains(event.target)) {
+                                    this.closeDropdown();
+                                }
+                            },
+                            selectOption: function(option) {
+                                this.selectedArea = option;
+                                this.validateArea();
+                                this.closeDropdown();
+                            },
+                            filterOptions: function() {
+                                // Filtering is handled by computed propertie
+                            },
+                            scrollToLetter: function(letter) {},
+                            validateEmail() {
+                                if (!this.email) {
+                                    this.errorEmailMessage = 'Please enter your email address.';
+                                } else if (!/^[\w\-\.]+@[\w\-]+(\.[\w\-]+)+$/.test(this.email)) {
+                                    this.errorEmailMessage = 'The email address format is incorrect.';
+                                } else {
+                                    this.errorEmailMessage = '';
+                                }
+                            },
+                            validatePassword() {
+                                if (!this.password) {
+                                    this.errorPasswordMessage = 'Please enter your password.';
+                                } else {
+                                    this.errorPasswordMessage = '';
+                                }
+                            },
+                            validatePasswordConfirm() {
+                                if (!this.passwordConfirm) {
+                                    this.errorPasswordConfirmMessage = 'Please re-enter your password.';
+                                } else if (this.password !== this.passwordConfirm) {
+                                    this.errorPasswordConfirmMessage = 'The passwords you entered do not match.';
+                                } else {
+                                    this.errorPasswordConfirmMessage = '';
+                                }
+                            },
+                            validateArea() {
+                                if (!this.selectedArea || !this.selectedArea.IOS2) {
+                                    this.areaErrorMessage = 'Please specify this location.';
+                                } else {
+                                    this.areaErrorMessage = '';
+                                }
+                            },
+                            handleSubmit(e) {
+                                this.validateEmail();
+                                this.validatePassword();
+                                this.validatePasswordConfirm();
+                                this.validateArea();
+                                // 若有任何错误，阻止提交
+                                if (this.errorEmailMessage || this.errorPasswordMessage || this.errorPasswordConfirmMessage || this.areaErrorMessage) return;
+                                this.errorMessage = '';
+                                document.getElementById('kc-register-form').submit()
+                            }
+                        },
+                        computed: {
+                            submitDisable() {
+                                return !this.email || !this.password || !this.agreedPolicy;
+                            },
+                            checkPolicy() {
+                                this.agreedPolicy = true;
+                            },
+                            hotOptions: function() {
+                                return this.countryOptions.filter(function(c) {
+                                    return HOT_CODES.indexOf(c.IOS2) !== -1;
+                                });
+                            },
+                            otherOptions: function() {
+                                return this.countryOptions.filter(function(c) {
+                                    return HOT_CODES.indexOf(c.IOS2) === -1;
+                                });
+                            },
+                            filteredHotOptions: function() {
+                                var query = this.searchQuery.toLowerCase();
+                                if (!query) return this.hotOptions;
+                                return this.hotOptions.filter(function(option) {
+                                    return option.EnName.toLowerCase().includes(query) ||
+                                        option.Code.includes(query);
+                                });
+                            },
+                            filteredOtherOptions: function() {
+                                var query = this.searchQuery.toLowerCase();
+                                var options = this.otherOptions;
+                                if (query) {
+                                    options = options.filter(function(option) {
+                                        return option.EnName.toLowerCase().includes(query) ||
+                                            option.Code.includes(query);
+                                    });
+                                }
+                                return options.sort(function(a, b) {
+                                    return a.EnName.localeCompare(b.EnName);
+                                });
+                            },
+                            selectedOption: function() {
+                                var _this = this;
+                                return this.countryOptions.find(function(c) {
+                                    return _this.selectedArea && c.IOS2 === _this.selectedArea.IOS2;
+                                });
+                            },
+                            currentArea: function() {
+                                var _this = this;
+                                //console.log('currentArea', _this.currentIOS)
+                                return this.countryOptions.find(function(c) {
+                                    return c.IOS2 === _this.currentIOS;
+                                });
+                            },
+                            alphabetLetters: function() {
+                                return 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+                            }
+                        },
+                        mounted() {
+                            this.fetchCountries();
+                            this.fetchUserArea();
+                        },
+                        beforeDestroy: function() {
+                            document.removeEventListener('click', this.handleClickOutside);
+                        },
+                    });
+                    </script>
+                    </div>
+                </div>
+                <div class="footer">
+                    Need help?
+                    <a class="sp-text" href="mailto:codebuddy@tencent.com">
+                        Contact support
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 支持多个alert时也能用
+        document.querySelectorAll('.alert-close-icon').forEach(function(icon) {
+            icon.addEventListener('click', function() {
+                // 获取最近的.alert祖先并隐藏它
+                var alertBox = icon.closest('.alert-info');
+                if (alertBox) {
+                    alertBox.style.visibility = 'hidden';
+                }
+            });
+        });
+    });
+    </script>
+
+    
+</body></html>

@@ -1,0 +1,5 @@
+# CodeBuddy账号池
+# 格式: email|password|created_at|platform
+# ==========================================
+example1@duck.com|password123|2025-01-01 12:00:00|codebuddy.ai
+example2@duck.com|password456|2025-01-01 12:05:00|codebuddy.ai

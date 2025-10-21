@@ -1,0 +1,27 @@
+# =============================
+# CB2API 项目依赖
+# =============================
+
+# 核心API框架
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+
+# HTTP客户端和异步IO
+httpx>=0.25.0
+aiofiles>=23.2.0
+requests>=2.32.0
+
+# Web自动化（用于账户注册和令牌管理）
+selenium>=4.15.0
+selenium-wire>=5.1.0
+blinker>=1.6.2
+
+# Token计算（可选）
+tiktoken>=0.5.0
+
+# 日志和监控
+python-json-logger>=2.0.7
+
+# 开发工具（可选）
+python-dotenv>=1.0.0

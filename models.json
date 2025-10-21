@@ -1,0 +1,11 @@
+{
+    "claude-sonnet-4-20250514": "default-model",
+    "claude-3-7-sonnet-20250219":"default-model",
+    "claude-3-5-haiku-20241022":"default-model",
+    "claude-opus-4-1-20250805": "default-model",
+    "gpt-5": "gpt-5",
+    "gpt-5-mini": "gpt-5-mini",
+    "gpt-5-nano": "gpt-5-nano",
+    "gemini-2.5-flash": "gemini-2.5-flash",
+    "gemini-2.5-pro": "gemini-2.5-pro"
+}

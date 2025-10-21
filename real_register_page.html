@@ -1,0 +1,105 @@
+<html class="login-pf" lang="en"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+            <meta name="HandheldFriendly" content="true">
+        <title>
+        Sign in to copilot
+        </title>
+        <link rel="icon" href="/auth/resources/ggxjf/login/ide-oversea/img/icon.png">
+                <link href="/auth/resources/ggxjf/common/keycloak/node_modules/@patternfly/patternfly/patternfly.min.css" rel="stylesheet">
+                <link href="/auth/resources/ggxjf/common/keycloak/node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet">
+                <link href="/auth/resources/ggxjf/common/keycloak/node_modules/patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet">
+                <link href="/auth/resources/ggxjf/common/keycloak/lib/pficon/pficon.css" rel="stylesheet">
+                <link href="/auth/resources/ggxjf/login/ide-oversea/css/login.css" rel="stylesheet">
+                <link href="/auth/resources/ggxjf/login/ide-oversea/css/styles.v9.css" rel="stylesheet">
+        <script type="importmap">
+            {
+                "imports": {
+                    "rfc4648": "/auth/resources/ggxjf/common/keycloak/vendor/rfc4648/rfc4648.js"
+                }
+            }
+        </script>
+        <script type="module">
+                import { checkCookiesAndSetTimer } from "/auth/resources/ggxjf/login/ide-oversea/js/authChecker.js";
+                checkCookiesAndSetTimer(
+                "/auth/realms/copilot/login-actions/restart?client_id=console&skip_logout=true"
+                );
+        </script>
+            <link rel=" stylesheet" as="style" href="/auth/resources/ggxjf/login/ide-oversea/css/Dialog.css" onload="this.onload=null;this.rel=' stylesheet'">
+                <link rel="stylesheet" as="style" href="/auth/resources/ggxjf/login/ide-oversea/css/Button.css" onload="this.onload=null;this.rel='stylesheet'">
+                <script type="module" src="/auth/resources/ggxjf/login/ide-oversea/js/Dialog.js"></script>
+                <script src="/auth/resources/ggxjf/login/ide-oversea/js/axios.min.js"></script>
+                <script src="/auth/resources/ggxjf/login/ide-oversea/js/vue.min.js"></script>
+                <script type="module">
+                document.addEventListener("click", (event) => {
+                    const link = event.target.closest("a[data-once-link]");
+                    if (!link) {
+                        return;
+                    }
+                    if (link.getAttribute("aria-disabled") === "true") {
+                        event.preventDefault();
+                        return;
+                    }
+                    const {
+                        disabledClass
+                    } = link.dataset;
+                    if (disabledClass) {
+                        link.classList.add(...disabledClass.trim().split(/\s+/));
+                    }
+                    link.setAttribute("role", "link");
+                    link.setAttribute("aria-disabled", "true");
+                });
+                </script>
+    </head>
+
+    <body class="">
+        <div class="login-pf-page">
+            <div id="kc-header" class="login-pf-page-header">
+                <div id="kc-header-wrapper" class="">
+                    copilot
+                </div>
+            </div>
+            <div class="card-pf">
+                <header class="login-pf-header">
+                                <h1 id="kc-page-title">
+        We are sorry...
+                                </h1>
+                </header>
+                <a href="/" target="_self" class="header-logo">
+                    <img class="logo" src="https://codebuddy-1328495429.cos.accelerate.myqcloud.com/web/ide/codeBuddy.png">
+                </a>
+                <div id="kc-content">
+                    <div id="kc-content-wrapper">
+        <div id="kc-error-message">
+            <p class="instruction">Cookie not found. Please make sure cookies are enabled in your browser.</p>
+        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    Need help?
+                    <a class="sp-text" href="mailto:codebuddy@tencent.com">
+                        Contact support
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 支持多个alert时也能用
+        document.querySelectorAll('.alert-close-icon').forEach(function(icon) {
+            icon.addEventListener('click', function() {
+                // 获取最近的.alert祖先并隐藏它
+                var alertBox = icon.closest('.alert-info');
+                if (alertBox) {
+                    alertBox.style.visibility = 'hidden';
+                }
+            });
+        });
+    });
+    </script>
+
+    
+</body></html>

@@ -1,0 +1,14 @@
+# CB2API Docker最小化依赖
+# 仅包含main.py和format_proxy.py所需的依赖
+
+# 核心API框架
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+
+# HTTP客户端
+httpx==0.25.2
+aiofiles==23.2.1
+
+# Token计算（可选，如果API需要）
+# tiktoken==0.5.2

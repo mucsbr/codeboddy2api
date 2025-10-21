@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  codebuddy_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cb2api:latest
+    container_name: codebuddy_api
+    restart: unless-stopped
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    volumes:
+      - ./client.json:/app/client.json:ro
+      - ./models.json:/app/models.json:ro
+      - ./codebuddy.json:/app/codebuddy.json:ro
+      - ./codebuddy_accounts.txt:/app/codebuddy_accounts.txt:rw
+      - ./logs:/app/logs:rw
+    environment:
+      - LOG_LEVEL=INFO
+    networks:
+      - codebuddy_net
+    ports:
+      - "127.0.0.1:8000:8000"  # 仅绑定到本地
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+  format_proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cb2api:latest
+    container_name: format_proxy
+    restart: unless-stopped
+    command: ["uvicorn", "format_proxy:app", "--host", "0.0.0.0", "--port", "8181", "--reload"]
+    ports:
+      - "8181:8181"  # 格式代理端口
+    depends_on:
+      - codebuddy_api
+    environment:
+      - BACKEND_TYPE=codebuddy
+      - BACKEND_BASE_URL=http://codebuddy_api:8000
+      - PROXY_PORT=8181
+      - LOG_LEVEL=INFO
+    networks:
+      - codebuddy_net
+    volumes:
+      - ./logs:/app/logs:rw
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8181/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+networks:
+  codebuddy_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+volumes:
+  logs:
+    driver: local

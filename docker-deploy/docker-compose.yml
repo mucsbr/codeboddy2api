@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  # 主API服务
+  main-api:
+    build:
+      context: ..  # 使用父目录作为构建上下文
+      dockerfile: docker-deploy/Dockerfile
+    image: cb2api-minimal:latest
+    container_name: cb2api_main
+    restart: unless-stopped
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    volumes:
+      # 配置文件挂载（只读）
+      - ../client.json:/app/client.json:ro
+      - ../models.json:/app/models.json:ro
+      - ../codebuddy.json:/app/codebuddy.json:ro
+      # 账户文件挂载（读写）
+      - ../codebuddy_accounts.txt:/app/codebuddy_accounts.txt:rw
+      # 日志目录
+      - ./logs:/app/logs:rw
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - TZ=Asia/Shanghai
+    networks:
+      - cb2api_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  # 格式代理服务
+  format-proxy:
+    build:
+      context: ..  # 使用父目录作为构建上下文
+      dockerfile: docker-deploy/Dockerfile
+    image: cb2api-minimal:latest
+    container_name: cb2api_proxy
+    restart: unless-stopped
+    command: ["uvicorn", "format_proxy:app", "--host", "0.0.0.0", "--port", "8181"]
+    ports:
+      - "8181:8181"
+    depends_on:
+      - main-api
+    environment:
+      - BACKEND_TYPE=${BACKEND_TYPE:-openai}
+      - BACKEND_BASE_URL=http://main-api:8000
+      - PROXY_PORT=8181
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - TZ=Asia/Shanghai
+    volumes:
+      # 日志目录
+      - ./logs:/app/logs:rw
+    networks:
+      - cb2api_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8181/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+networks:
+  cb2api_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16
